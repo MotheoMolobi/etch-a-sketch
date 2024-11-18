@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">ETCH A SKETCH</h1>
+
+    <div class="head-container">
+        <input id="input" type="text" name="num-input">
+        <button id="set-btn">SET</button>
+    </div>
+    
+    <div class="grid-container">
+
+    </div>
+
+    <div class="button-container">
+        <div class="header">
+            <input id="eraser" type="radio" onclick="erase()" name="header">
+            <label for="eraser">ERASER</label>
+    
+            <!--Radio button for ranbow colour -->
+            <input id ="random-color" type="radio" onclick="random()" name="header">
+            <label for="randoom-color">RANDOM</label>
+    
+            <input id="black-color" type="radio" onclick="black()" name="header">
+            <label for="black-color">BLACK</label>
+        </div>
+        
+        <button id="clear-btn" onclick="clear()">CLEAR</button>
+    
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
