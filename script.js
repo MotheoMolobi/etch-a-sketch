@@ -1,8 +1,25 @@
 const gridContainer = document.querySelector(".grid-container");
 const input = document.querySelector("#input");
 const setBtn = document.querySelector("#set-btn");
+const black = document.querySelector("#black-color")
+const random = document.querySelector("#random-color")
 
 setBtn.addEventListener("click", setGrid);
+
+black.addEventListener("focus", () => {
+    let columns = document.getElementsByClassName("column");
+        for (let i = 0; i < columns.length; i++) {
+            columns[i].addEventListener("mouseover", colorBlack);
+        }
+});
+
+random.addEventListener("focus", () => {
+    let columns = document.getElementsByClassName("column");
+        for (let i = 0; i < columns.length; i++) {
+            columns[i].addEventListener("mouseover", randomColor);
+        }
+});
+
 
 function setGrid() {
     let number = input.value
@@ -19,5 +36,15 @@ function setGrid() {
         }
     }
     input.value = ""
+    
 }
+
+function colorBlack() {
+    this.style.backgroundColor = '#2e2b2b';
+}
+function randomColor() {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        this.style.backgroundColor = "#" + randomColor;
+}
+
 
