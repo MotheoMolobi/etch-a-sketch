@@ -70,3 +70,8 @@ footer, #clear-btn:hover {
 #display {
     font-weight: bold;
 }
+
+#input {
+    height: 30px;
+    width: 40px;
+}
